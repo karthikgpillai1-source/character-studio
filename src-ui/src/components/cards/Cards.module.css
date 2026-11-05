@@ -1,0 +1,97 @@
+.specGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.specItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.specLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.specValue {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: rgba(96, 165, 250, 0.15);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.recommendationGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.recItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.recLabel {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.recValueHighlight {
+  font-size: 0.9rem;
+  color: var(--success);
+  font-weight: 600;
+}
+
+.errorState {
+  color: var(--error);
+  font-size: 0.85rem;
+}
+
+.actionBtn {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--text-primary);
+  padding: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.actionBtn:hover {
+  background-color: rgba(96, 165, 250, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+}

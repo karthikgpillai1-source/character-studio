@@ -1,0 +1,39 @@
+.monitorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.monitorRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.monitorHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.monitorLabel {
+  color: var(--text-secondary);
+}
+
+.monitorValue {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.progressBarBg {
+  height: 6px;
+  background-color: var(--bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}

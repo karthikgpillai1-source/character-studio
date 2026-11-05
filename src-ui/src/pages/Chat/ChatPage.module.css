@@ -1,0 +1,212 @@
+.chatContainer {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  gap: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.leftPanel, .centerPanel, .rightPanel {
+  background: rgba(26, 27, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.panelHeader {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.panelContent {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Left Panel Elements */
+.emptyCharacters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #a0aec0;
+  gap: 10px;
+}
+
+.emptyStateBody {
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+
+.emptyStateSub {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.newCharacterBtn {
+  margin-top: 15px;
+  padding: 10px;
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  color: #a0aec0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.newCharacterBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.runtimeBanner {
+  background: rgba(234, 179, 8, 0.1);
+  border-bottom: 1px solid rgba(234, 179, 8, 0.2);
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.bannerTitle {
+  color: #eab308;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.bannerSub {
+  color: #a0aec0;
+  font-size: 12px;
+}
+
+/* Center Panel Elements */
+.messageList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.message {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  line-height: 1.5;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.messageUser {
+  align-self: flex-end;
+  background: #4a9eff;
+  color: #fff;
+  border-bottom-right-radius: 0;
+}
+
+.messageAssistant {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  border-bottom-left-radius: 0;
+}
+
+.messageSystem {
+  align-self: center;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  font-size: 12px;
+  max-width: 90%;
+  border-radius: 4px;
+}
+
+.inputContainer {
+  padding: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.inputField {
+  flex: 1;
+  background: rgba(15, 16, 21, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: inherit;
+  resize: none;
+  min-height: 20px;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: rgba(74, 158, 255, 0.5);
+}
+
+.sendBtn {
+  background: #4a9eff;
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.sendBtn:hover {
+  background: #3b82f6;
+}
+
+/* Right Panel Elements */
+.tabList {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  color: #4a9eff;
+  border-bottom-color: #4a9eff;
+}
+
+.tabContent {
+  padding: 15px;
+  color: #a0aec0;
+  font-size: 13px;
+  line-height: 1.6;
+}

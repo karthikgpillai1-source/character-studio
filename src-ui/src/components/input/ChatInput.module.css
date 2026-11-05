@@ -1,0 +1,79 @@
+.inputContainer {
+  padding: 16px 24px 24px;
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: center;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease;
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--border-focus);
+}
+
+.textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  resize: none;
+  padding: 8px;
+  max-height: 200px;
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  padding: 4px;
+}
+
+.sendBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.sendBtn.active {
+  background-color: var(--accent);
+  color: white;
+}
+
+.sendBtn.active:hover {
+  background-color: var(--accent-hover);
+}
+
+.stopBtn {
+  background-color: var(--bg-secondary);
+  color: var(--error);
+  border: 1px solid var(--border-subtle);
+  animation: pulse 2s infinite;
+}
+
+.stopBtn:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--error);
+}

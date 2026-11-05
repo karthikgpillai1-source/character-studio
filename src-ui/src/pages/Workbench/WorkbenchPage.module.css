@@ -1,0 +1,218 @@
+.workbenchGrid {
+  display: flex;
+  flex: 1;
+  padding: 16px;
+  gap: 16px;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.columnLeft {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.columnCenter {
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.columnRight {
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+/* Panel Styles */
+.panel {
+  background: rgba(25, 27, 34, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.panelHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panelContent {
+  padding: 12px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Key Value Lists (Compacted) */
+.kvList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kvRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.kvRow span:first-child {
+  color: #888;
+}
+
+.kvRow span:last-child {
+  color: #e0e0e0;
+  font-weight: 500;
+  text-align: right;
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.metricGreen {
+  color: #4ade80 !important;
+}
+
+/* Prompt Inspector */
+.promptPanel {
+  flex: 1;
+}
+
+.rawPrompt {
+  margin: 0;
+  padding: 10px;
+  background: #111216;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #c9d1d9; /* GitHub dim text */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+/* Token Stream */
+.streamPanel {
+  flex: 1;
+}
+
+.tokenStreamBox {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  background: #111216;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  align-content: flex-start;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* Runtime Logs */
+.logPanel {
+  flex: 1;
+}
+
+.logList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.logRow {
+  display: flex;
+  gap: 8px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-family: monospace;
+  white-space: pre;
+}
+
+.logTime {
+  color: #666;
+  white-space: nowrap;
+}
+
+.logType {
+  color: #c678dd; /* Purple */
+  white-space: nowrap;
+}
+
+.logMsg {
+  color: #abb2bf;
+}
+
+/* Raw Response Viewer */
+.rawResponseBox {
+  font-family: monospace;
+  font-size: 0.75rem;
+  background: #0f1015;
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* Custom Scrollbars for all panels */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2); 
+}
+
+.expandBtn {
+  background: transparent;
+  border: none;
+  color: #4a9eff;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 0;
+}
+.expandBtn:hover {
+  text-decoration: underline;
+}
